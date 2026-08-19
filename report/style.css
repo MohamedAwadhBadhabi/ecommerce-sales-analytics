@@ -1,0 +1,307 @@
+/* =========================
+   Base
+========================= */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f4f6f8;
+    color: #172b4d;
+}
+
+.report {
+    max-width: 900px;
+    margin: 40px auto;
+    background: white;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+
+/* =========================
+   Cover
+========================= */
+
+.cover {
+    min-height: 1100px;
+    padding: 120px 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.eyebrow {
+    margin: 0 0 24px;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    color: #174a7e;
+}
+
+.cover h1 {
+    margin: 0;
+    font-size: 48px;
+    line-height: 1.15;
+    color: #123f6d;
+}
+
+.subtitle {
+    margin: 24px auto 0;
+    max-width: 650px;
+    font-size: 21px;
+    line-height: 1.5;
+    color: #526579;
+}
+
+.cover-line {
+    width: 90px;
+    height: 4px;
+    margin: 40px auto;
+    background: #174a7e;
+    border-radius: 4px;
+}
+
+.tools {
+    margin: 0;
+    font-size: 15px;
+    color: #718096;
+    letter-spacing: 0.5px;
+}
+
+
+
+/* =========================
+   Report Pages
+========================= */
+
+.page {
+    min-height: 1100px;
+    padding: 80px;
+    background: #ffffff;
+}
+
+.section-number {
+    margin: 0 0 12px;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    color: #174a7e;
+}
+
+.page h2 {
+    margin: 0 0 28px;
+    font-size: 36px;
+    color: #123f6d;
+}
+
+.lead {
+    max-width: 720px;
+    margin: 0 0 45px;
+    font-size: 18px;
+    line-height: 1.7;
+    color: #526579;
+}
+
+.summary-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+    margin-bottom: 45px;
+}
+
+.summary-card {
+    padding: 25px 20px;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    background: #f8fafc;
+}
+
+.summary-value {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 28px;
+    font-weight: bold;
+    color: #123f6d;
+}
+
+.summary-label {
+    display: block;
+    font-size: 13px;
+    color: #718096;
+    line-height: 1.4;
+}
+
+.highlight-box {
+    padding: 30px;
+    border-left: 5px solid #174a7e;
+    background: #f1f5f9;
+    border-radius: 8px;
+}
+
+.highlight-box h3 {
+    margin: 0 0 12px;
+    font-size: 20px;
+    color: #123f6d;
+}
+
+.highlight-box p {
+    margin: 0;
+    font-size: 16px;
+    line-height: 1.7;
+    color: #526579;
+}
+
+
+/* =========================
+   Analysis Section
+========================= */
+
+.analysis-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 22px;
+    margin-top: 35px;
+}
+
+.analysis-card {
+    padding: 28px;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    background: #f8fafc;
+}
+
+.analysis-card h3 {
+    margin: 0 0 14px;
+    font-size: 20px;
+    color: #123f6d;
+}
+
+.analysis-card p {
+    margin: 0;
+    font-size: 15px;
+    line-height: 1.7;
+    color: #526579;
+}
+
+
+
+/* =========================
+   PRINT / PDF SETTINGS
+   ========================= */
+
+@page {
+    size: A4 portrait;
+    margin: 0;
+}
+
+@media print {
+
+    body {
+        margin: 0;
+        background: white;
+    }
+
+    .report {
+        width: 100%;
+        max-width: none;
+        margin: 0;
+        box-shadow: none;
+    }
+
+    .page,
+.cover {
+    width: 210mm;
+    min-height: 297mm;
+    box-sizing: border-box;
+
+    break-after: page;
+    page-break-after: always;
+}
+
+.page:last-child {
+    break-after: auto;
+    page-break-after: auto;
+}
+
+    .page:last-child {
+        break-after: auto;
+        page-break-after: auto;
+    }
+
+    .analysis-grid {
+        gap: 12px;
+    }
+
+    .analysis-card {
+        padding: 18px;
+        break-inside: avoid;
+        page-break-inside: avoid;
+    }
+
+    .analysis-card h3 {
+        margin-top: 0;
+        margin-bottom: 10px;
+    }
+
+    .analysis-card p {
+        margin-top: 6px;
+        margin-bottom: 6px;
+    }
+
+    .highlight-box {
+        margin-top: 14px;
+        padding: 18px;
+        break-inside: avoid;
+        page-break-inside: avoid;
+    }
+
+    .highlight-box h3 {
+        margin-top: 0;
+        margin-bottom: 10px;
+    }
+}
+
+
+/* =========================
+   Page 06 - Recommendations
+   ========================= */
+
+.recommendations-page {
+    padding-top: 28px;
+    padding-bottom: 28px;
+}
+
+.recommendations-page .analysis-grid {
+    gap: 14px;
+}
+
+.recommendations-page .analysis-card {
+    padding: 18px 20px;
+}
+
+.recommendations-page .analysis-card h3 {
+    margin-bottom: 8px;
+}
+
+.recommendations-page .analysis-card p {
+    margin: 0;
+    line-height: 1.45;
+}
+
+.recommendations-page .highlight-box {
+    margin-top: 14px;
+    padding: 18px 22px;
+}
+
+.recommendations-page .highlight-box h3 {
+    margin-bottom: 8px;
+}
+
+.recommendations-page .highlight-box p {
+    margin: 0;
+    line-height: 1.45;
+}
