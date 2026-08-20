@@ -3,6 +3,11 @@
 E-commerce sales analysis using SQL and Power BI, focused on customer behavior, sales performance, market trends, and actionable business insights.
 
 ---
+## Dashboard Preview
+
+![E-Commerce Sales Analysis Dashboard](assets/dashboard-preview.png)
+
+---
 
 ## Project Overview
 

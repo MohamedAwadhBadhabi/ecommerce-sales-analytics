@@ -1,0 +1,15 @@
+# Power BI
+*.pbit
+*.tmp
+
+# VS Code
+.vscode/
+
+# Windows
+Thumbs.db
+Desktop.ini
+
+# Temporary files
+*.bak
+*.temp
+*.log
